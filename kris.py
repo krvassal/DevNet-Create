@@ -6,6 +6,10 @@ from umqtt.simple import MQTTClient
 import time
 from ssd1306 import SSD1306_I2C
 
+c = MQTTClient(client_id = "umqtt_client", server = "test.mosquitto.org", port = 8883, ssl = True, ssl_params={"cert_reqs":ssl.CERT_REQUIRED, "ca_certs":"/flash/cert/ca.pem"})
+c.connect()
+
+
 
 
 
